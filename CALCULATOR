@@ -1,0 +1,66 @@
+import java.util.Scanner;
+class A{
+    Scanner obj=new Scanner(System.in);
+    int fun1(){
+        System.out.println("enter the first number");
+              int num1=obj.nextInt();
+              return num1;
+      }
+    int  fun2(){
+        System.out.println("enter the operater for operation:");
+        System.out.println("enter :(1)+   (2)-  (3)*  (4)/ ");
+        int b=obj.nextInt();
+         return b;}
+    int fun3(){
+        
+        System.out.println("enter the second  number");
+        int num2=obj.nextInt();
+        return num2;
+    }
+    public static void main(String[]args){
+        boolean o=true;
+        Scanner obj=new Scanner(System.in);
+    A obj2=new A();
+    int num1=obj2.fun1(); 
+    int b=obj2.fun2();
+    int num2= obj2.fun3();
+    boolean p=true;
+    while(p) {if(b==1){
+                   num1=num1+num2;
+     }
+                    else if(b==2){
+                   num1=num1-num2;
+    }
+                    else if(b==3){
+                   num1=num1*num2;
+    }
+                    else if(b==4){
+                   num1=num1/num2;
+                    }
+                   else{
+                   System.out.println("please enter correct option:");
+                   }
+       System.out.println("the result is"+num1);
+       System.out.println("do you want to continue operation:enter:(1)YES  (2)NO ");
+       int d=obj.nextInt();
+       switch(d){
+           case 2:
+           System.out.println(".....THANK YOU.... ");
+           p=false;
+           break;
+       default:
+           System.out.println("for same value enter :1");
+          System.out.println("for diiferent value enter:2");
+          int e=obj.nextInt();
+          if(e==1){
+              b=obj2.fun2();
+     num2= obj2.fun3();
+               }
+               else{
+                   num1=num1-num1;
+                    num1=obj2.fun1(); 
+                    b=obj2.fun2();
+                    num2= obj2.fun3();
+               }
+       }
+            }}}
